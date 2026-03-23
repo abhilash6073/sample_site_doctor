@@ -18,6 +18,14 @@ export default function Home() {
   const topFaqs = faqs.slice(0, 6);
   const [openFaq, setOpenFaq] = useState(null);
 
+  const galleryImages = [
+    { src: doctor.photo, alt: doctor.name, label: "Profile" },
+    { src: "/images/mbbs-certificate.png", alt: "MBBS Certificate", label: "MBBS" },
+    { src: "/images/ms-certificate.png", alt: "MS Certificate", label: "MS" },
+    { src: "/images/mch-certificate.jpg", alt: "MCh Certificate", label: "MCh" }
+  ];
+  const [activeImage, setActiveImage] = useState(galleryImages[0]);
+
   return (
     <>
       {/* HERO */}
@@ -78,8 +86,30 @@ export default function Home() {
       <section className="section section-alt">
         <div className="container">
           <div className="doctor-snapshot">
-            <div className="doctor-photo-wrapper">
-              <img src={doctor.photo} alt={doctor.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <div className="doctor-gallery">
+              <div className="doctor-photo-wrapper" style={{ background: 'var(--off-white)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img 
+                  src={activeImage.src} 
+                  alt={activeImage.alt} 
+                  style={{ 
+                    width: '100%', height: '100%', 
+                    objectFit: activeImage.label === 'Profile' ? 'cover' : 'contain',
+                    padding: activeImage.label === 'Profile' ? '0' : '20px'
+                  }} 
+                />
+                <div className="gallery-badge">{activeImage.label}</div>
+              </div>
+              <div className="gallery-thumbnails">
+                {galleryImages.map((img, idx) => (
+                  <button 
+                    key={idx} 
+                    className={`thumb-btn ${activeImage.src === img.src ? 'active' : ''}`}
+                    onClick={() => setActiveImage(img)}
+                  >
+                    <img src={img.src} alt={img.alt} />
+                  </button>
+                ))}
+              </div>
             </div>
             <div className="doctor-info">
               <h3>{doctor.name}</h3>

@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { doctor, clinic } from '../config';
 
 export default function About() {
+  const galleryImages = [
+    { src: doctor.photo, alt: doctor.name, label: "Profile" },
+    { src: "/images/mbbs-certificate.png", alt: "MBBS Certificate", label: "MBBS" },
+    { src: "/images/ms-certificate.png", alt: "MS Certificate", label: "MS" },
+    { src: "/images/mch-certificate.jpg", alt: "MCh Certificate", label: "MCh" }
+  ];
+  const [activeImage, setActiveImage] = useState(galleryImages[0]);
+
   return (
     <>
       <section className="page-hero">
@@ -12,8 +21,30 @@ export default function About() {
         <div className="container">
           <div className="about-grid">
             <div>
-              <div className="doctor-photo-wrapper">
-                <img src={doctor.photo} alt={doctor.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div className="doctor-gallery">
+                <div className="doctor-photo-wrapper" style={{ background: 'var(--off-white)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img 
+                    src={activeImage.src} 
+                    alt={activeImage.alt} 
+                    style={{ 
+                      width: '100%', height: '100%', 
+                      objectFit: activeImage.label === 'Profile' ? 'cover' : 'contain',
+                      padding: activeImage.label === 'Profile' ? '0' : '20px'
+                    }} 
+                  />
+                  <div className="gallery-badge">{activeImage.label}</div>
+                </div>
+                <div className="gallery-thumbnails">
+                  {galleryImages.map((img, idx) => (
+                    <button 
+                      key={idx} 
+                      className={`thumb-btn ${activeImage.src === img.src ? 'active' : ''}`}
+                      onClick={() => setActiveImage(img)}
+                    >
+                      <img src={img.src} alt={img.alt} />
+                    </button>
+                  ))}
+                </div>
               </div>
               <div style={{ marginTop: '30px' }}>
                 <h3 style={{ marginBottom: '8px' }}>Qualifications</h3>
