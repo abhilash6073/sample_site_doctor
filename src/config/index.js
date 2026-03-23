@@ -1,0 +1,14 @@
+export { default as brand } from './brand';
+export { default as doctor } from './doctor';
+export { default as clinic } from './clinic';
+export { default as services } from './services';
+export { default as testimonials } from './testimonials';
+export { default as stats } from './stats';
+export { default as beforeAfterConfig } from './beforeAfter';
+export { default as clinics } from './clinics';
+export { default as booking } from './booking';
+export { default as virtualConsult } from './virtualConsult';
+export { default as faqs } from './faqs';
+export { default as contact } from './contact';
+export { default as conversation } from './conversation';
+export { default as legal } from './legal';
