@@ -138,10 +138,15 @@ export default function Home() {
           <div className="services-grid">
             {services.map((s) => (
               <Link to={`/services/${s.id}`} className="service-card" key={s.id}>
-                <span className="icon">{s.icon}</span>
-                <h4>{s.title}</h4>
-                <p>{s.shortDesc}</p>
-                <span className="link">Learn More →</span>
+                {s.image && <img src={s.image} alt={s.title} className="service-card-img" />}
+                <div className="service-card-content">
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                    <span className="icon" style={{ fontSize: '1.4rem', margin: 0 }}>{s.icon}</span>
+                    <h4 style={{ margin: 0 }}>{s.title}</h4>
+                  </div>
+                  <p>{s.shortDesc}</p>
+                  <span className="link">Learn More →</span>
+                </div>
               </Link>
             ))}
           </div>

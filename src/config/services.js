@@ -3,6 +3,7 @@ const services = [
     id: 'fue-hair-transplant',
     title: 'FUE Hair Transplant',
     icon: '✦',
+    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600&h=400',
     shortDesc: 'Minimally invasive follicular unit extraction for natural, permanent hair restoration with no linear scarring.',
     longDesc: `Follicular Unit Extraction (FUE) is the gold standard in modern hair transplantation. Dr. Vikram Patel extracts individual hair follicles from the donor area and transplants them to thinning or balding regions, creating a completely natural-looking result.
 
@@ -30,6 +31,7 @@ const services = [
     id: 'dhi-hair-transplant',
     title: 'DHI Hair Transplant',
     icon: '◈',
+    image: 'https://images.unsplash.com/photo-1579684453423-f84349ef60b0?auto=format&fit=crop&q=80&w=600&h=400',
     shortDesc: 'Direct Hair Implantation for maximum density and precision placement — ideal for hairline refinement.',
     longDesc: `Direct Hair Implantation (DHI) uses a specialised Choi implanter pen to extract and implant follicles in a single step. This technique allows Dr. Patel precise control over the angle, depth, and direction of each graft — ideal for high-density restoration and hairline work.
 
@@ -51,6 +53,7 @@ const services = [
     id: 'prp-therapy',
     title: 'PRP Hair Therapy',
     icon: '💎',
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600&h=400',
     shortDesc: 'Platelet-Rich Plasma therapy that stimulates dormant follicles and strengthens existing hair for visibly thicker growth.',
     longDesc: `PRP (Platelet-Rich Plasma) therapy harnesses your body's own growth factors to rejuvenate hair follicles. At Mane Restore, we use advanced double-spin centrifuge technology to concentrate platelets for optimal results.
 
@@ -73,6 +76,7 @@ const services = [
     id: 'scalp-micropigmentation',
     title: 'Scalp Micropigmentation',
     icon: '◉',
+    image: 'https://images.unsplash.com/photo-1512495039889-52a3b799c9bc?auto=format&fit=crop&q=80&w=600&h=400',
     shortDesc: 'Medical-grade tattooing that creates the appearance of a full, closely-cropped head or adds density to thinning areas.',
     longDesc: `Scalp Micropigmentation (SMP) uses precision micro-needles to deposit pigment into the scalp dermis, replicating the look of natural hair follicles. At Mane Restore, we use medical-grade organic pigments matched to your hair colour.
 
@@ -93,6 +97,7 @@ const services = [
     id: 'beard-transplant',
     title: 'Beard & Eyebrow Transplant',
     icon: '✧',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600&h=400',
     shortDesc: 'Precision facial hair transplantation for fuller beards, moustaches, and natural eyebrow restoration.',
     longDesc: `Facial hair transplantation uses follicles from the scalp donor area to create or enhance beard, moustache, sideburn, or eyebrow density. Dr. Patel places each graft with meticulous attention to natural growth direction and angle.
 
@@ -113,6 +118,7 @@ const services = [
     id: 'hair-loss-consultation',
     title: 'Hair Loss Consultation',
     icon: '🔍',
+    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600&h=400',
     shortDesc: 'Comprehensive evaluation including digital trichoscopy, blood work review, and a personalised treatment roadmap.',
     longDesc: `A thorough hair loss consultation is the critical first step. Dr. Vikram Patel personally evaluates your hair loss pattern, scalp condition, donor area quality, and overall health using advanced digital trichoscopy at Mane Restore.
 

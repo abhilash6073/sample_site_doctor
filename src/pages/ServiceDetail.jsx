@@ -29,6 +29,13 @@ export default function ServiceDetail() {
       <section className="section">
         <div className="container">
           <div className="service-detail-content">
+            {service.image && (
+              <img 
+                src={service.image.replace('w=600', 'w=1200').replace('h=400', 'h=600')} 
+                alt={service.title} 
+                style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: 'var(--radius-lg)', marginBottom: '40px', boxShadow: 'var(--shadow-md)' }} 
+              />
+            )}
             {service.longDesc.split('\n\n').map((block, i) => {
               if (block.startsWith('**') && block.endsWith('**')) {
                 return <h3 key={i} style={{ marginTop: '32px', marginBottom: '12px' }}>{block.replace(/\*\*/g, '')}</h3>;

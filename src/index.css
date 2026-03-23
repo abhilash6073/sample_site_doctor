@@ -259,17 +259,18 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* SERVICES GRID */
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 .service-card {
-  padding: 36px 28px; border-radius: var(--radius-md);
+  border-radius: var(--radius-md); overflow: hidden;
   background: var(--white); border: 1px solid var(--light-gray);
-  transition: all var(--transition); text-decoration: none; display: block;
+  transition: all var(--transition); text-decoration: none; display: flex; flex-direction: column;
 }
 .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--primary-light); }
-.service-card .icon { font-size: 2rem; margin-bottom: 16px; display: block; color: var(--primary); }
-.service-card h4 { font-size: 1.05rem; margin-bottom: 10px; color: var(--near-black); }
-.service-card p { font-size: 0.88rem; color: var(--medium-gray); line-height: 1.6; margin-bottom: 16px; }
-.service-card .link { font-size: 0.85rem; font-weight: 600; color: var(--primary); display: inline-flex; align-items: center; gap: 6px; }
+.service-card-img { width: 100%; height: 200px; object-fit: cover; }
+.service-card-content { padding: 24px 28px; flex: 1; display: flex; flex-direction: column; }
+.service-card-content h4 { font-size: 1.05rem; color: var(--near-black); }
+.service-card-content p { font-size: 0.88rem; color: var(--medium-gray); line-height: 1.6; margin-bottom: 20px; flex: 1; }
+.service-card .link { font-size: 0.85rem; font-weight: 600; color: var(--primary); display: inline-flex; align-items: center; gap: 6px; margin-top: auto; }
 .service-card:hover .link { gap: 10px; }
 
 /* TESTIMONIALS */
